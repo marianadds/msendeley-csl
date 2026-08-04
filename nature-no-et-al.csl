@@ -70,10 +70,7 @@
               <text variable="genre" text-case="capitalize-first"/>
             </if>
           </choose>
-          <text term="at"/>
-          <choose>
-            <if variable="DOI" match="any">
-              <text variable="DOI" prefix="https://doi.org/"/>
+            <text variable="DOI" prefix="https://doi.org/"/>
             </if>
             <else>
               <text variable="URL"/>
