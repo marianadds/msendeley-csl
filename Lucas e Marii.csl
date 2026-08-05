@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
+  <info>
+    <title>Lucas and Mari</title>
+    <id>http://www.zotero.org/styles/nature-modified-universal-doi</id>
+    <link href="http://www.zotero.org/styles/nature-no-et-al" rel="self"/>
+    <updated>2026-08-04T00:00:00+00:00</updated>
+  </info>
+  
+  <macro name="author">
+    <names variable="author">
+      <name delimiter=", " and="text" initialize-with=". " delimiter-precedes-last="always"/>
+      <label form="short" prefix=", "/>
+      <et-al font-style="italic"/>
+    </names>
+  </macro>
+  
+  <macro name="title">
+    <text variable="title" quotes="true"/>
+  </macro>
+  
+  <macro name="container-title">
+    <text variable="container-title" font-style="italic" form="short"/>
+  </macro>
+  
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout vertical-align="sup" delimiter=",">
+      <text variable="citation-number"/>
+    </layout>
+  </citation>
+  
+  <bibliography entry-spacing="0" line-spacing="2">
+    <layout suffix=".">
+      <text macro="author" suffix=", "/>
+      <text macro="title" suffix=", "/>
+      <text macro="container-title" suffix=" "/>
+      <text variable="volume" suffix=" "/>
+      <date variable="issued" prefix="(" suffix=")">
+        <date-part name="year"/>
+      </date>
+      <choose>
+        <if variable="page">
+          <text variable="page" prefix=": "/>
+        </if>
+      </choose>
+      <choose>
+        <if variable="DOI">
+          <text variable="DOI" prefix=". https://doi.org/"/>
+        </if>
+      </choose>
+    </layout>
+  </bibliography>
+</style>
